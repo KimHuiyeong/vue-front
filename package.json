@@ -10,6 +10,7 @@
   "dependencies": {
     "axios": "^0.26.0",
     "core-js": "^3.6.5",
+    "express": "^4.17.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
@@ -41,5 +42,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimHuiyeong/vue-front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimHuiyeong/vue-front/issues"
+  },
+  "homepage": "https://github.com/KimHuiyeong/vue-front#readme"
 }
