@@ -6,6 +6,10 @@
     <p>내용: {{ contents }}</p>
     <p>작성일: {{ createdAt }}</p>
   </div>
+  <div>
+    <button v-on:click="fnUpdate">수정</button>
+    <button v-on:click="fnDelete">삭제</button>
+  </div>
 
 </template>
 
@@ -37,7 +41,22 @@ export default {
           .then((err) => {
             console.log(err)
           })
-    },
+    },fnUpdate() {
+      this.$router.push({
+        path: './write',
+        query: this.requestBody
+      })
+    }, fnDelete (){
+      if (!confirm("삭제하시겠습니까?")) return
+
+      this.$axios.delete(this.$serverUrl + '/board/' + this.idx, {})
+          .then(() => {
+            alert('삭제되었습니다.');
+            this.fnList();
+          }).catch((err) => {
+        console.log(err);
+      })
+    }
   }
 }
 </script>
